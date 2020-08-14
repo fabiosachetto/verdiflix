@@ -1,7 +1,7 @@
 {
     "categorias": [
         {
-            "titulo": "Lua no mundo da Luna",
+            "titulo": "Meus vídeos favoritos",
             "link": "https://www.youtube.com/channel/UCW5VHT_wSBhXjQ29Qi-bVdA",
             "cor": "green",
 
@@ -13,7 +13,7 @@
             "videos": [
                 {
                     "titulo": "Lua no mundo da Luna",
-                    "url": "https://www.youtube.com/channel/UCW5VHT_wSBhXjQ29Qi-bVdA"
+                    "url": "https://www.youtube.com/watch?v=gAMlbO6JhGs"
                 },
                 {
                     "titulo": "Eu no Futuro",
