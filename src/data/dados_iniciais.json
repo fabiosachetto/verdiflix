@@ -6,18 +6,18 @@
             "cor": "green",
 
             "link_extra": {
-                "text": "Primeiro Vídeo do Canal da Luna",
+                "text": "",
                 "url": "https://www.youtube.com/watch?v=uP-WNxUvPEk"
             },
 
             "videos": [
                 {
-                    "titulo": "Primeiro Vídeo do Canal da Luna",
-                    "url": "https://www.youtube.com/watch?v=uP-WNxUvPEk"
+                    "titulo": "Lua no mundo da Luna",
+                    "url": "https://www.youtube.com/channel/UCW5VHT_wSBhXjQ29Qi-bVdA"
                 },
                 {
-                    "titulo": "Teste",
-                    "url": "https://www.youtube.com/watch?v=uP-WNxUvPEk"
+                    "titulo": "Eu no Futuro",
+                    "url": "https://www.youtube.com/watch?v=fux6eWKh5zk"
                 }
             ]
         }
