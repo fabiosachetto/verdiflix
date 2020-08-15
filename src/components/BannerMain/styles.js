@@ -121,5 +121,6 @@ export const WatchButton = styled.button`
   margin: 0 auto;
   @media (max-width: 800px) {
     display: block;
+    text-align: center;
   }
 `;
