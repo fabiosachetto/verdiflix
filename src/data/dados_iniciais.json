@@ -38,7 +38,7 @@
       
       {
         "titulo": "Filmes",
-        "cor": "orange",
+        "cor": "#00FF7F",
         "videos": [
           {
             "titulo": "Interestellar",
@@ -57,7 +57,7 @@
       
       {
         "titulo": "Aprendendo a aprender tecnologia",
-        "cor": "#6b5be2",
+        "cor": "#32CD32",
         "link_extra": {
           "text": "",
           "url": "https://alura.com.br/curso-online-aprender-a-aprender-tecnicas-para-seu-autodesenvolvimento"
