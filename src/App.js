@@ -35,11 +35,6 @@ function App() {
         category={dadosIniciais.categorias[3]}
       />
 
-      <Carousel
-        //ignoreFirstVideo
-        category={dadosIniciais.categorias[4]}
-      />
-
       <Footer />
 
 
