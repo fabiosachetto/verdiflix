@@ -12,9 +12,6 @@ function Menu() {
                 <img className="Logo" src={Logo} alt="VerdiFlix" title="VerdiFlix"></img>
             </Link>
 
-
-
-
             <Button as={Link} to="/cadastro/video" className="ButtonLink">
                 Novo Vídeo
             </Button>

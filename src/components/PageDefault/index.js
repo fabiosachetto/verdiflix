@@ -1,15 +1,28 @@
-import React from 'react';
-import Menu from '../Menu';
-import Footer from '../Footer';
+import React from "react";
+import Menu from "../Menu";
+import Footer from "../Footer";
+import styled from "styled-components";
 
-function PageDefault() {
-    return (
-        <div>
-            <Menu />
-            <a href="/" style={{margin: "0 auto", width: "128px", display: "block", color: "red", fontWeight: "bold"}}>Voltar para Home</a>
-            <Footer />
-        </div>
-    );
+const Main = styled.main`
+    background-color: var(--black);
+    color: var(--white);
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    flex: 1;
+`;
+
+function PageDefault({ children }) {
+  console.log({ children });
+
+  return (
+    <>
+      <Menu />
+      <Main>{children}</Main>
+
+      <Footer />
+    </>
+  );
 }
 
 export default PageDefault;
