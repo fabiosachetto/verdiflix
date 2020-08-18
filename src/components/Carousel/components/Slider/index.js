@@ -21,9 +21,11 @@ const Container = styled.ul`
   
   .slick-prev {
     left: 0;
+    height: 100%;
   }
   .slick-next {
     right: 16px;
+    height: 100%;
   }
 `;
 
