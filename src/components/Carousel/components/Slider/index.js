@@ -22,19 +22,13 @@ const Container = styled.ul`
   .slick-prev {
     left: 0;
   }
-  
+
   .slick-next {
     right: 16px;
   }
 
   .slick-prev, .slick-next {
     height: 100%;
-    background: var(--white);
-    opacity: .75;
-  }
-
-  .slick-next:before, .slick-prev:before {
-    color: #000;
   }
 `;
 
