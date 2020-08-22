@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import PageDefault from "../../../components/PageDefault";
 import { Link } from "react-router-dom";
-import FormField from "../../../components/FormField";
 
 function CadastroCategoria() {
   const valoresIniciais = {
-    nome: "",
-    descricao: "",
+    nome: " ",
+    descricao: " ",
     cor: "",
   }
 
   const [categorias, setCategorias] = useState([]);
   const [values, setValues] = useState(valoresIniciais);
+
 
   function setValue(chave, valor) {
     setValues({
@@ -22,11 +22,11 @@ function CadastroCategoria() {
   };
 
   function handleChange(infosDoEvento) {
-    const { getAttribute, value } = infosDoEvento.target;
+    //const { getAttribute, value } = infosDoEvento.target;
 
     setValue(
-      getAttribute('name'),
-      value
+      infosDoEvento.target.getAttribute('name'),
+      infosDoEvento.target.value,
     );
   }
 
@@ -47,8 +47,7 @@ function CadastroCategoria() {
           setValues(valoresIniciais)
         }}>
 
-        <FormField />
-
+        
         <div>
           <label>
             Nome da Categoria:
