@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import PageDefault from "../../../components/PageDefault";
 import { Link } from "react-router-dom";
+import PageDefault from "../../../components/PageDefault";
+import FormField from "../../../components/FormField";
 
 function CadastroCategoria() {
   const valoresIniciais = {
-    nome: " ",
-    descricao: " ",
+    nome: "",
+    descricao: "",
     cor: "",
   }
 
@@ -18,15 +19,22 @@ function CadastroCategoria() {
       ...values,
       //chave: pode ser nome, descrição... Enfim
       [chave]: valor, //nome: 'valor'
-    });
+    })
   };
 
   function handleChange(infosDoEvento) {
-    //const { getAttribute, value } = infosDoEvento.target;
 
+    /*
+    ###RESOLVER ESSE BUG###
+    const { getAttribute, value } = infosDoEvento.target;
+    setValue(
+      getAttribute('name'),
+      value
+    );*/
+    
     setValue(
       infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value,
+      infosDoEvento.target.value
     );
   }
 
@@ -47,18 +55,13 @@ function CadastroCategoria() {
           setValues(valoresIniciais)
         }}>
 
-        
-        <div>
-          <label>
-            Nome da Categoria:
-            <input
-              type="text"
-              value={values.nome}
-              name="nome"
-              onChange={handleChange}
-            />
-          </label>
-        </div>
+        <FormField
+          label="Nome da Categoria"
+          type="text"
+          name="nome"
+          value={values.nome}
+          onChange={handleChange}
+        />
 
         <div>
           <label>
@@ -72,17 +75,13 @@ function CadastroCategoria() {
           </label>
         </div>
 
-        <div>
-          <label>
-            Cor:
-            <input
-              type="color"
-              value={values.cor}
-              name="cor"
-              onChange={handleChange}
-            />
-          </label>
-        </div>
+        <FormField
+          label="Cor"
+          type="color"
+          name="cor"
+          value={values.cor}
+          onChange={handleChange}
+        />
 
         <button>Cadastrar</button>
       </form>
