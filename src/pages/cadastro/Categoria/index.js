@@ -1,59 +1,62 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import PageDefault from "../../../components/PageDefault";
-import FormField from "../../../components/FormField";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import PageDefault from '../../../components/PageDefault';
+import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
 
 function CadastroCategoria() {
   const valoresIniciais = {
-    nome: "",
-    descricao: "",
-    cor: "",
-  }
+    nome: '',
+    descricao: '',
+    cor: '',
+  };
 
   const [categorias, setCategorias] = useState([]);
   const [values, setValues] = useState(valoresIniciais);
 
-
   function setValue(chave, valor) {
     setValues({
       ...values,
-      //chave: pode ser nome, descrição... Enfim
-      [chave]: valor, //nome: 'valor'
-    })
-  };
+      // chave: pode ser nome, descrição... Enfim
+      [chave]: valor, // nome: 'valor'
+    });
+  }
 
   function handleChange(infosDoEvento) {
-
     /*
     ###RESOLVER ESSE BUG###
     const { getAttribute, value } = infosDoEvento.target;
     setValue(
       getAttribute('name'),
       value
-    );*/
-    
+    ); */
+
     setValue(
       infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value
+      infosDoEvento.target.value,
     );
   }
 
   return (
     <PageDefault>
-      <h1>Cadastrar Categoria: {values.nome}</h1>
+      <h1>
+        Cadastrar Categoria:
+        {values.nome}
+      </h1>
 
       <form
         onSubmit={function handleSubmit(infosDoEvento) {
           infosDoEvento.preventDefault();
 
           setCategorias([
-            /*OBS: Os ... é pra avisar pra pegar o q tem tudo ai q vc já escreveu, não joga fora não sobrescreve. */
+            /* OBS: Os ... é pra avisar pra pegar o q tem tudo ai q vc já escreveu, não joga fora não sobrescreve. */
             ...categorias,
-            values
+            values,
           ]);
 
-          setValues(valoresIniciais)
-        }}>
+          setValues(valoresIniciais);
+        }}
+      >
 
         <FormField
           label="Nome da Categoria"
@@ -63,17 +66,13 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <div>
-          <label>
-            Descrição:
-            <textarea
-              type="text"
-              value={values.descricao}
-              name="descricao"
-              onChange={handleChange}
-            />
-          </label>
-        </div>
+        <FormField
+          label="Descrição"
+          type="text"
+          value={values.descricao}
+          name="descricao"
+          onChange={handleChange}
+        />
 
         <FormField
           label="Cor"
@@ -83,17 +82,15 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <button>Cadastrar</button>
+        <Button>Cadastrar</Button>
       </form>
 
       <ul>
-        {categorias.map((categoria, indice) => {
-          return (
-            <li key={`${categoria}${indice}`}>
-              {categoria.nome}
-            </li>
-          );
-        })}
+        {categorias.map((categoria, indice) => (
+          <li key={`${categoria}${indice}`}>
+            {categoria.nome}
+          </li>
+        ))}
       </ul>
 
       <Link to="/">Ir para a Home</Link>
