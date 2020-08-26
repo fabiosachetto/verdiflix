@@ -31,6 +31,13 @@ const Button = styled.button`
             border: 0;
             text-align: center;
     }
+
+    &.btn-cadastrar {
+        @media (max-width: 800px) {
+            display: block;
+            position: relative;
+        }
+    }
 `;
 
 export default Button;
