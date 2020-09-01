@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
@@ -23,19 +23,23 @@ function CadastroCategoria() {
   }
 
   function handleChange(infosDoEvento) {
-    /*
-    ###RESOLVER ESSE BUG###
-    const { getAttribute, value } = infosDoEvento.target;
-    setValue(
-      getAttribute('name'),
-      value
-    ); */
-
     setValue(
       infosDoEvento.target.getAttribute('name'),
       infosDoEvento.target.value,
     );
   }
+
+  useEffect(() => {
+    const URL_TOP = 'http://localhost:4040/categorias';
+
+    fetch(URL_TOP)
+      .then(async (respostaDoServidor) => {
+        const resposta = await respostaDoServidor.json();
+        setCategorias([
+          ...resposta,
+        ]);
+      });
+  }, []);
 
   return (
     <PageDefault>
@@ -82,7 +86,9 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <Button className="btn-cadastrar">Cadastrar</Button>
+        <Button className="btn-cadastrar">
+          Cadastrar
+        </Button>
       </form>
 
       <ul>
@@ -93,7 +99,9 @@ function CadastroCategoria() {
         ))}
       </ul>
 
-      <Link to="/">Ir para a Home</Link>
+      <Link to="/">
+        Ir para a Home
+      </Link>
     </PageDefault>
   );
 }
