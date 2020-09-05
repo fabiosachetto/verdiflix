@@ -52,8 +52,8 @@ function CadastroCategoria() {
         onSubmit={function handleSubmit(infosDoEvento) {
           infosDoEvento.preventDefault();
 
+          /* OBS: Os(...) é pra avisar pra pegar o q tem tudo ai q vc já escreveu, não joga fora não sobrescreve. */
           setCategorias([
-            /* OBS: Os ... é pra avisar pra pegar o q tem tudo ai q vc já escreveu, não joga fora não sobrescreve. */
             ...categorias,
             values,
           ]);
