@@ -30,7 +30,7 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const URL_TOP = 'http://localhost:4040/categorias';
+    const URL_TOP = 'http://localhost:8080/categorias';
 
     fetch(URL_TOP)
       .then(async (respostaDoServidor) => {
