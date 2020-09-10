@@ -30,7 +30,7 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const URL_TOP = window.location.hostname.includes('localhost') ? 'http://localhost:8080/categorias' : 'https://verdiflix.herokuapp.com/categorias';
+    const URL_TOP = window.location.hostname.includes('localhost') ? 'http://localhost:4040/categorias' : 'https://verdiflix.herokuapp.com/categorias';
 
     fetch(URL_TOP)
       .then(async (respostaDoServidor) => {
@@ -90,6 +90,13 @@ function CadastroCategoria() {
           Cadastrar
         </Button>
       </form>
+
+      {categorias.length === 0 && (
+        <div>
+          {/* Carregando */}
+          Loading...
+        </div>
+      )}
 
       <ul>
         {categorias.map((categoria) => (
