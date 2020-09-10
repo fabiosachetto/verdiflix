@@ -7,13 +7,13 @@ import Footer from '../../components/Footer';
 
 function Home() {
   return (
-    <div style={{ background: "#141414" }}>
+    <div style={{ background: '#141414' }}>
       <Menu />
 
-      <BannerMain 
+      <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"Canal da Luna"}
+        videoDescription="Canal da Luna"
       />
 
       <Carousel
@@ -26,17 +26,16 @@ function Home() {
       />
 
       <Carousel
-        //ignoreFirstVideo
+        // ignoreFirstVideo
         category={dadosIniciais.categorias[2]}
       />
 
       <Carousel
-        //ignoreFirstVideo
+        // ignoreFirstVideo
         category={dadosIniciais.categorias[3]}
       />
 
       <Footer />
-
 
     </div>
   );

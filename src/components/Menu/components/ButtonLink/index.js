@@ -1,14 +1,13 @@
 import React from 'react';
 
 function ButtonLink(props) {
+  // console.log(props);
 
-    //console.log(props);
-
-    return (
-        <a href={props.href} className={props.className} >
-            {props.children}
-        </a>
-    );
+  return (
+    <a href={props.href} className={props.className}>
+      {props.children}
+    </a>
+  );
 }
 
 export default ButtonLink;
