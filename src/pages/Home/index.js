@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import Menu from '../../components/Menu';
 // import dadosIniciais from '../../data/dados_iniciais.json';'
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import PageDefault from '../../components/PageDefault';
-// import Footer from '../../components/Footer';
 import categoriasRepository from '../../repositories/categorias';
 
 function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
 
   useEffect(() => {
+    // http://localhost:4040/categorias?_embed=videos
     categoriasRepository.getAllWithVideos()
       .then((categoriasComVideos) => {
         console.log(categoriasComVideos);
@@ -21,26 +20,36 @@ function Home() {
         console.log(err.message);
       });
   }, []);
-  // http://localhost:4040/categorias?_embed=videos
 
   return (
-    <PageDefault>
+    <PageDefault paddingAll={0}>
       {dadosIniciais.length === 0 && (<div>Loading...</div>)}
 
-      {dadosIniciais.length >= 1 && (
-        <>
-          <BannerMain
-            videoTitle={dadosIniciais[0].videos[0].titulo}
-            url={dadosIniciais[0].videos[0].url}
-            videoDescription="Canal da Luna"
-          />
+      {dadosIniciais.map((categoria, indice) => {
+        if (indice === 0) {
+          return (
+            <div key={categoria.id}>
+              <BannerMain
+                videoTitle={dadosIniciais[0].videos[0].titulo}
+                url={dadosIniciais[0].videos[0].url}
+                videoDescription="Canal da Luna"
+              />
 
+              <Carousel
+                ignoreFirstVideo
+                category={dadosIniciais[0]}
+              />
+            </div>
+          );
+        }
+
+        return (
           <Carousel
-            ignoreFirstVideo
-            category={dadosIniciais[0]}
+            key={categoria.id}
+            category={categoria}
           />
-        </>
-      )}
+        );
+      })}
 
       {/* <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
