@@ -212,28 +212,28 @@
       "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
     },
     {
-       "titulo": "O que todo projeto deveria ter? #01",
-       "url": "https://www.youtube.com/watch?v=yMRSDdifGW8",
-       "categoriaId": 6,
-       "id": 52
+      "titulo": "O que todo projeto deveria ter? #01",
+      "url": "https://www.youtube.com/watch?v=yMRSDdifGW8",
+      "categoriaId": 6,
+      "id": 52
+    },
+    {
+      "titulo": "Como fazer um jogo com JavaScript?",
+      "url": "https://www.youtube.com/watch?v=jOAU81jdi-c",
+      "categoriaId": 6,
+      "id": 53
+    },
+    {
+      "titulo": "Como fazer o efeito de desenhar com CSS?",
+      "url": "https://www.youtube.com/watch?v=4cEMgap9wpk",
+      "categoriaId": 6,
+      "id": 54
+    },
+    {
+      "titulo": "Usando Excel como CMS + React",
+      "url": "https://www.youtube.com/watch?v=5t2gq3xJZ9o",
+      "categoriaId": 6,
+      "id": 55
     }
-    // {
-    //   "titulo": "Como fazer um jogo com JavaScript?",
-    //   "url": "https://www.youtube.com/watch?v=jOAU81jdi-c",
-    //   "categoriaId": 6,
-    //   "id": 53
-    // },
-    // {
-    //   "titulo": "Como fazer o efeito de desenhar com CSS?",
-    //   "url": "https://www.youtube.com/watch?v=4cEMgap9wpk",
-    //   "categoriaId": 6,
-    //   "id": 54
-    // },
-    // {
-    //   "titulo": "Usando Excel como CMS + React",
-    //   "url": "https://www.youtube.com/watch?v=5t2gq3xJZ9o",
-    //   "categoriaId": 6,
-    //   "id": 55
-    // }
   ]
 }
